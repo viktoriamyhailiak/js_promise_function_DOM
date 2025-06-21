@@ -3,8 +3,6 @@
 function waitFor(element, eventName) {
   return new Promise((resolve) => {
     element.addEventListener(eventName, function (e) {
-      e.preventDefault();
-
       resolve(
         `It was ${eventName} on the element: ${element.nodeName}, id: ${element.id}`,
       );
